@@ -138,6 +138,15 @@ Add the following line at the end:
 ```bash
 @include /etc/smokeping/config.d/librenms.conf
 ```
+If you need your librenms.conf file to have extra text in order for smokeping to be compiled correctly, you can create different file under /etc/smokeping/config.d/ with that text you are missing and include it above or under your other include lines in your /etc/smokeping/config file. That will make smokeping parse the missing text you are required to have in your librenms.conf file so it will work, for example
+
+*** Targets ***
+
+probe = FPingNormal
+
+remark = Smokeping
+
+
 
 Exit and save.
 
