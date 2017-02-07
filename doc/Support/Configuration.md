@@ -382,6 +382,13 @@ The above are examples, these will rewrite device snmp locations so you don't ne
 $config['bad_if'][] = "voip-null";
 $config['bad_iftype'][] = "voiceEncap";
 ```
+This will ignore every loopback0, Loopback1 etc. 
+
+```php
+$config['bad_if_regexp'][] = '/Loopback/';
+$config['bad_if_regexp'][] = '/tunnel/';
+```
+
 Numerous defaults exist for this array already (see includes/defaults.inc.php for the full list). You can expand this list
 by continuing the array.
 `bad_if` is matched against the ifDescr value.
